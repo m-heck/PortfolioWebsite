@@ -1,0 +1,130 @@
+/* Turn cursor into gold circle */
+
+/* =============== VARIABLES =============== */
+:root {
+    /* colors */
+    --primary-color: hsl(45, 52%, 38%);
+    --background-color: hsl(1, 0%, 15%);
+    --background-color-darker: hsl(1, 0%, 10%);
+
+    --text-color: hsl(45, 7%, 88%, 0.8);
+
+    /* font sizes */
+    --normal-font-size: 1.5rem;
+    --h1-font-size: 8rem;
+    
+    /* font weights */
+    --normal-font-weight: 400;
+    --h1-font-weight: 200;
+    
+    /* misc */
+    --sidebar-width: 6%;
+
+}
+
+/* for non-mobile */
+@media screen and (min-width: 480px) {
+    :root {
+        /* font sizes */
+
+        /* misc */
+    }
+}
+
+/* =============== GLOBALS =============== */
+
+* {
+    font-size: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+
+    font-size: var(--normal-font-size);
+    font-weight: var(--normal-font-weight);
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: left;
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--h1-font-weight);
+}
+
+.content-container {
+    padding: 3rem;
+    height: 100vh;
+    width: 100%;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* =============== SIDEBAR =============== */
+#sidebar {
+    
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: var(--background-color-darker);
+    position: fixed;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#sidebar ul {
+    margin-bottom: 2rem;
+}
+
+/* Add text that shows up to the right saying what the page is */
+#sidebar li {
+    margin: 7vh;
+    cursor: pointer;
+}
+
+/* =============== CONTENT =============== */
+#content {
+    width: 94%;
+    position: absolute;
+    right: 0;
+}
+
+/* =============== HOME =============== */
