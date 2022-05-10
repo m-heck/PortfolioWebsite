@@ -17,22 +17,24 @@
 </head>
 <body>
     <div id="sidebar">
+      <div id="navigation-container">
         <ul>
-            <li>o</li> <!-- LinkedIn -->
-            <li>o</li> <!-- Github -->
-            <li>o</li> <!-- Resume -->
+            <li><a href="#" class="menu-icon">ABOUT</a></li>
+            <li><a href="" class="menu-icon">EXPERIENCE</a></li>
+            <li><a href="" class="menu-icon">PROJECTS</a></li>
         </ul>
+        <i class="uil uil-minus" class="show-menu" id="close-menu"></i>
+      </div>
+      <div class="hamburger-menu">
+        <i class="uil uil-bars" class="toggle" id="open-menu"></i>
+      </div>
+
+        
     </div>
     <div id="content">
-        <div id="home" class="content-container">
-            <h1 id="home-title">Maren Heck</h1>
-            <!-- Arrow pointing downwards -->
-        </div>
         <div id="about" class="content-container">
             <h1 id="about-title">About</h1>
-        </div>
-        <div id="experience" class="content-container">
-            <h1 id="experience-title">Experience</h1>
+            <!-- Arrow pointing downwards -->
         </div>
     </div>
     <script src='./app/js/script.js' charset="UTF-8"></script>

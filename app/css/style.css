@@ -3,14 +3,15 @@
 /* =============== VARIABLES =============== */
 :root {
     /* colors */
-    --primary-color: hsl(45, 52%, 38%);
-    --background-color: hsl(1, 0%, 15%);
-    --background-color-darker: hsl(1, 0%, 10%);
+    --primary-color: hsl(40, 30%, 38%);
+    --background-color: hsl(40, 50%, 98%);
+    --background-color-lighter: hsla(40, 50%, 98%, 0.7);
 
-    --text-color: hsl(45, 7%, 88%, 0.8);
+    --text-color: hsl(40, 30%, 20%);
 
     /* font sizes */
     --normal-font-size: 1.5rem;
+    --sidebar-font-size: 1.5rem;
     --h1-font-size: 8rem;
     
     /* font weights */
@@ -18,16 +19,18 @@
     --h1-font-weight: 200;
     
     /* misc */
-    --sidebar-width: 6%;
+    --sidebar-width: 300px;
 
 }
 
-/* for non-mobile */
-@media screen and (min-width: 480px) {
+/* for mobile */
+@media screen and (max-width: 768px) {
     :root {
         /* font sizes */
+        --h1-font-size: 4rem;
 
         /* misc */
+        --sidebar-font-size: 1rem;
     }
 }
 
@@ -96,13 +99,17 @@ h1 {
 }
 
 /* =============== SIDEBAR =============== */
-#sidebar {
-    
+
+/* For non-mobile */
+#sidebar { 
+    color: var(--background-color-lighter);
     width: var(--sidebar-width);
-    height: 100vh;
-    background-color: var(--background-color-darker);
+    height: 100%;
+    background-color: var(--primary-color);
     position: fixed;
     left: 0;
+    text-align: left;
+    font-size: var(--sidebar-font-size);
 
     display: flex;
     flex-direction: column;
@@ -110,21 +117,45 @@ h1 {
     align-items: center;
 }
 
-#sidebar ul {
-    margin-bottom: 2rem;
+#navigation-container ul {
+    margin: 2rem;
 }
 
 /* Add text that shows up to the right saying what the page is */
-#sidebar li {
-    margin: 7vh;
+#navigation-container li {
+    margin-bottom: 7vh;
     cursor: pointer;
+}
+
+/* For mobile */
+@media screen and (max-width: 768px) {
+    #sidebar {
+        height: auto;
+        width: 100%;
+        top: 0;
+        position: relative;
+        text-align: center;
+    }
+
+    #navigation-container a {
+        margin: 4vh;
+    }
 }
 
 /* =============== CONTENT =============== */
 #content {
-    width: 94%;
+    width: (100% - 600px);
     position: absolute;
-    right: 0;
+    margin-left: 300px;
+    left: 0;
+}
+
+/* For mobile */
+@media screen and (max-width: 768px) {
+    #content {
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 /* =============== HOME =============== */
