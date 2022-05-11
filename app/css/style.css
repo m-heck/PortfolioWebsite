@@ -3,7 +3,7 @@
 /* =============== VARIABLES =============== */
 :root {
     /* colors */
-    --primary-color: hsl(40, 30%, 38%);
+    --primary-color: hsl(40, 40%, 38%);
     --background-color: hsl(40, 50%, 98%);
     --background-color-lighter: hsla(40, 50%, 98%, 0.7);
 
@@ -51,7 +51,7 @@ html {
 
 a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--background-color-lighter);
 }
 
 ul {
@@ -110,6 +110,7 @@ h1 {
     left: 0;
     text-align: left;
     font-size: var(--sidebar-font-size);
+    z-index: 1;
 
     display: flex;
     flex-direction: column;
@@ -121,7 +122,6 @@ h1 {
     margin: 2rem;
 }
 
-/* Add text that shows up to the right saying what the page is */
 #navigation-container li {
     margin-bottom: 7vh;
     cursor: pointer;
@@ -142,6 +142,9 @@ h1 {
     }
 }
 
+/* ========== JAVASCRIPT HELPERS ========== */
+
+
 /* =============== CONTENT =============== */
 #content {
     width: (100% - 600px);
@@ -155,6 +158,7 @@ h1 {
     #content {
         width: 100%;
         margin-left: 0;
+        top: -25%;
     }
 }
 
