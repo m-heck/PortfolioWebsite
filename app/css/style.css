@@ -25,8 +25,7 @@
     /* misc */
     --sidebar-gap: 40px;
     --socials-gap: 2rem;
-    --project-img-width: 400px;
-    --image-offser: 150px;
+    --image-offset: 70px;
 
 }
 
@@ -353,7 +352,8 @@ h3 {
 }
 
 .project-unit a {
-    width: var(--project-img-width);
+    width: 100%;
+    max-width: 600px;
     -moz-box-shadow: 10px 10px 15px var(--background-color-darker);
     -webkit-box-shadow: 10px 10px 15px var(--background-color-darker);
     box-shadow: 10px 10px 15px var(--background-color-darker);
@@ -362,7 +362,7 @@ h3 {
 .project-image {
     object-fit: cover;
     width: var(--project-img-width);
-    height: 250px;
+    height: auto;
     z-index: 2;
 }
 
