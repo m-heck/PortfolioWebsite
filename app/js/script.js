@@ -1,100 +1,45 @@
 console.log("javascript loaded");
 
-/* ============= TOGGLE MENU ============= */
-const navMenu = document.getElementById('navigation');
-const navOpen = document.getElementById('open-menu');
-const navClose = document.getElementById('close-menu');
+// ================ CURSOR ================
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.pageX + 'px';
+  cursor.style.top = e.pageY + 'px';
+})
 
-/* shows menu */
-if (navOpen) {
-    navOpen.addEventListener('click', () => {
-        navMenu.classList.add('show-menu');
-        navOpen.classList.add('hide-toggle');
-      }
-    )
-};
-
-/* hides menu */
-if(navClose) {
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu');
-        navOpen.classList.remove('hide-toggle');
-    })
+function invisible(div){
+  div.style.fontSize = "0";
 }
 
-/* ============= HIDE MENU ON LINK-CLICK ============= */
-const links = document.querySelectorAll('.menu-icon');
+/*
 
-links.forEach(n => console.log(n));
-
-function hideMenu() {
-    const navMenu = document.getElementById('navigation');
-    navMenu.classList.remove('show-menu');
-    navOpen.classList.remove('hide-toggle');
+function addEvent(obj, evt, fn) {
+  if (obj.addEventListener) {
+      obj.addEventListener(evt, fn, false);
+  }
+  else if (obj.attachEvent) {
+      obj.attachEvent("on" + evt, fn);
+  }
 }
 
-links.forEach(n => n.addEventListener('click', hideMenu));
-
-/* ============= STOPS TRANSITIONS WHEN MENU IS CLICKED ============= */
-links.forEach(n => {
-  navOpen.addEventListener('click', () => {
-    n.style.transition = "opacity 1ms ease-in";
-  })
-})
-
-/* ============= TRANSITIONS ============= */
-/* Fade in */
-const faders = document.querySelectorAll('.fade-in');
-
-const appearOptions = {
-  //threshold: 1, // waits for the entire thing to be in the screen
-  //rootMargin: "0px 0px -100px 0px"
-};
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add('appear');
-      appearOnScroll.unobserve(entry.target);
-    }
-  })
-}, appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-})
-
-/* slide in */
-const sliders = document.querySelectorAll('.slide-in');
-sliders.forEach(slider => {
-  appearOnScroll.observe(slider);
-})
-
-/* ============= PARALLAX ============= */
-/* image breaks */
-let breakTexts = document.querySelectorAll('.image-break-text');
-
-window.addEventListener('scroll', function() {
-    breakTexts.forEach(text => {
-        if (text.classList.contains('reverse-text')) {
-            let offset = text.getBoundingClientRect().top + 1000;
-            text.style.left = offset * .25 + 'px';
-        } else {
-            let offset = text.getBoundingClientRect().top - 2500;
-            text.style.right = offset * .25 + 'px';
-        }
-
-    });
+addEvent(document, "mouseout", function(e) {
+  e = e ? e : window.event;
+  var from = e.relatedTarget || e.toElement;
+  if (!from || from.nodeName == "HTML") {
+      cursor.style.width = '0';
+  }
 });
+*/
 
-/* title text */
-if (true) {
-    let title_text = document.getElementById('title-text');
+// ================ JQUERY ================
 
-    window.addEventListener('scroll', function() {
-      var value = window.scrollY;
+var script = document.createElement('script');
+script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+document.getElementsByTagName('head')[0].appendChild(script);
 
-      title_text.style.left = value * .25 + 'px';
-    })
-  };
+/*
+$(".down").click(function() {
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $("#project2").offset().top
+  }, 2000);
+});*/

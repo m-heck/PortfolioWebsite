@@ -3,31 +3,45 @@
 /* =============== VARIABLES =============== */
 :root {
     /* colors */
-    --primary-color: hsl(45, 52%, 38%);
-    --background-color: hsl(1, 0%, 15%);
-    --background-color-darker: hsl(1, 0%, 10%);
+    --primary-color: hsl(45, 42%, 48%);
+    --background-color: hsl(45, 30%, 97%);
+    --background-color-darker: hsl(45, 7%, 80%);
 
-    --text-color: hsl(45, 7%, 88%, 0.8);
+    --text-color: hsl(45, 30%, 18%);
+    --text-color-lighter: hsl(45, 10%, 38%);
 
     /* font sizes */
+    --small-font-size: 1rem;
     --normal-font-size: 1.5rem;
-    --h1-font-size: 8rem;
+    --h1-font-size: 7.5rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 3rem;
+    --icon-size: 2rem;
     
     /* font weights */
     --normal-font-weight: 400;
     --h1-font-weight: 200;
     
     /* misc */
-    --sidebar-width: 6%;
+    --sidebar-gap: 40px;
+    --socials-gap: 2rem;
 
 }
 
-/* for non-mobile */
-@media screen and (min-width: 480px) {
+/* for mobile */
+@media screen and (max-width: 767px) {
     :root {
         /* font sizes */
+        --small-font-size: 0.8rem;
+        --normal-font-size: 1rem;
+        --h1-font-size: 3rem;
+        --h2-font-size: 1rem;
+        --h3-font-size: 2rem;
+        --icon-size: 1.5rem;
 
         /* misc */
+        --sidebar-gap: 25px;
+        --socials-gap: 0.8rem;
     }
 }
 
@@ -39,11 +53,12 @@
     padding: 0;
     margin: 0;
     outline: none;
+    overflow-x: hidden;
 }
 
 html {
     width: 100%;
-    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -63,11 +78,10 @@ img {
 
 body {
     width: 100%;
-    overflow-x: hidden;
 
     font-size: var(--normal-font-size);
     font-weight: var(--normal-font-weight);
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Playfair Display', serif;
     background-color: var(--background-color);
     color: var(--text-color);
     text-align: left;
@@ -78,29 +92,102 @@ body {
     justify-content: space-between;
 }
 
+html, body {
+    height: 100vh;
+    overflow: hidden;
+}
+
 h1 {
     font-size: var(--h1-font-size);
     font-weight: var(--h1-font-weight);
 }
 
-.content-container {
-    padding: 3rem;
-    height: 100vh;
-    width: 100%;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+h2 {
+    font-size: var(--h2-font-size);
+    font-weight: var(--h20-font-weight);
+    letter-spacing: .25rem;
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+    font-weight: var(--h3-font-weight);
+}
+
+/* =============== DECOR =============== */
+
+#scribbles {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    opacity: .1;
+    right: -130px;
+    top: -100px;
+}
+
+#scribbles2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    opacity: .1;
+    bottom: -130px;
+    left: -100px;
+}
+
+/* for non-mobile */
+@media screen and (min-width: 768px) {
+    #scribbles {
+        opacity: 0.05;
+        width: 500px;
+        height: 500px;
+        right: -230px;
+        top: -200px;
+    }
+
+    #scribbles2 {
+        position: absolute;
+        opacity: 0.07;
+        width: 500px;
+        height: 500px;
+        bottom: -230px;
+        left: -200px;
+    }
+}
+
+/* =============== CURSOR =============== 
+.cursor {
+    position: fixed;
+    opacity: 0.3;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--text-color);
+    transition: 0.025s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* =============== SOCIALS =============== */
+
+#socials {
+    color: var(--text-color-lighter);
+    opacity: 0.8;
+    font-size: var(--icon-size);
+    position: absolute;
+    right: var(--socials-gap);
+    z-index: 3;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+#socials a {
+    margin-top: 1rem;
 }
 
 /* =============== SIDEBAR =============== */
 #sidebar {
-    
-    width: var(--sidebar-width);
+    width: auto;
     height: 100vh;
-    background-color: var(--background-color-darker);
     position: fixed;
     left: 0;
 
@@ -108,6 +195,8 @@ h1 {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+
+    z-index: 3;
 }
 
 #sidebar ul {
@@ -116,8 +205,45 @@ h1 {
 
 /* Add text that shows up to the right saying what the page is */
 #sidebar li {
-    margin: 7vh;
+    margin: var(--sidebar-gap);
     cursor: pointer;
+}
+
+.nav-bar {
+    opacity: .6;
+    font-size: 30px;
+}
+
+#home-bar:hover:after {
+    content: " HOME";
+    opacity: .4;
+    font-weight: 100;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+#about-bar:hover:after {
+    content: " ABOUT";
+    opacity: .4;
+    font-weight: 100;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+#experience-bar:hover:after {
+    content: " EXPERIENCE";
+    opacity: .4;
+    font-weight: 100;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+#projects-bar:hover:after {
+    content: " PROJECTS";
+    opacity: .4;
+    font-weight: 100;
+    font-size: 20px;
+    letter-spacing: 3px;
 }
 
 /* =============== CONTENT =============== */
@@ -125,6 +251,133 @@ h1 {
     width: 94%;
     position: absolute;
     right: 0;
+    height: 100vh;
+
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    z-index: 1;
+
+    word-wrap: break-word;
 }
 
-/* =============== HOME =============== */
+.content-container {
+    padding: 3rem;
+    height: 100vh;
+    width: 95vw;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    scroll-snap-align: center;
+    position: relative;
+}
+
+.background-image {
+    opacity: 0.4;
+    position: absolute;
+    z-index: -1;
+    width: 80vw;
+    min-width: 400px;
+    max-width: 700px;
+    left: 60px;
+    -moz-box-shadow: 10px 10px 10px var(--background-color-darker);
+    -webkit-box-shadow: 10px 10px 10px var(--background-color-darker);
+    box-shadow: 10px 10px 10px var(--background-color-darker);
+
+    /* hide or unhide images */
+    opacity: 0;
+}
+
+.text-content {
+    margin-top: 1rem;
+}
+
+/* for non-mobile */
+@media screen and (min-width: 768px) {
+    #content {
+        left: 20vw;
+    }
+
+    .content-container {
+        width: 70vw;
+    }
+
+    /*
+    .content-container {
+        flex-direction: row;
+        justify-content: space-between;
+        flex: ;
+    }
+
+    #home {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title-content {
+        border: blue solid 3px;
+        width: auto;
+    }
+
+    .text-content {
+        border: green solid 3px;
+    }*/
+}
+
+/* =============== PROJECTS =============== */
+
+.project-unit {
+    margin-top: 7rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-image {
+    object-fit: cover;
+    width: 400px;
+    height: 250px;
+
+    -moz-box-shadow: 10px 10px 15px var(--background-color-darker);
+    -webkit-box-shadow: 10px 10px 15px var(--background-color-darker);
+    box-shadow: 10px 10px 15px var(--background-color-darker);
+}
+
+.project-title {
+    margin-top: 2rem;
+}
+
+.project-text {
+    font-size: var(--small-font-size);
+    max-width: 600px;
+}
+
+.arrow {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.down {
+    position: absolute;
+    bottom: 4rem;
+    right: 50%;
+}
+
+/* for non-mobile */
+@media screen and (min-width: 768px) {
+    .project-text {
+        max-width: 800px;
+    }
+
+    .arrow {
+        font-size: 25px;
+    }
+
+    .down {
+        bottom: 0rem;
+    }
+}
