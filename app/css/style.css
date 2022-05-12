@@ -57,8 +57,10 @@
 }
 
 html {
-    width: 100%;
+    border: purple 3px solid;
+    width: 100vw;
     scroll-behavior: smooth;
+    height: 100vh;
 }
 
 a {
@@ -77,6 +79,8 @@ img {
 }
 
 body {
+    border: 3px green solid;
+    height: auto;
     width: 100%;
 
     font-size: var(--normal-font-size);
@@ -93,7 +97,6 @@ body {
 }
 
 html, body {
-    height: 100vh;
     overflow: hidden;
 }
 
@@ -184,6 +187,15 @@ h3 {
     margin-top: 1rem;
 }
 
+/* =============== HOME ARROW =============== */
+.home-arrow {
+    position: absolute;
+    left: var(--socials-gap);
+    top: 1rem;
+    font-size: var(--icon-size);
+    z-index: 5;
+}
+
 /* =============== SIDEBAR =============== */
 #sidebar {
     width: auto;
@@ -194,7 +206,7 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
 
     z-index: 3;
 }
@@ -246,6 +258,14 @@ h3 {
     letter-spacing: 3px;
 }
 
+/* =============== NUM BAR =============== */
+#num-bar ul{
+    height: auto;
+    border: yellow solid 3px;
+    display: flex;
+    flex-direction: row;
+}
+
 /* =============== CONTENT =============== */
 #content {
     width: 94%;
@@ -254,6 +274,7 @@ h3 {
     height: 100vh;
 
     overflow: scroll;
+    overflow-x: hidden;
     scroll-snap-type: y mandatory;
     z-index: 1;
 
@@ -341,6 +362,7 @@ h3 {
     object-fit: cover;
     width: 400px;
     height: 250px;
+    z-index: 2;
 
     -moz-box-shadow: 10px 10px 15px var(--background-color-darker);
     -webkit-box-shadow: 10px 10px 15px var(--background-color-darker);
@@ -380,4 +402,20 @@ h3 {
     .down {
         bottom: 0rem;
     }
+}
+
+/* =============== PROJECTS PAGES =============== */
+
+.pcontent {
+    height: auto;
+    margin: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pcontent p, .pcontent img {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
