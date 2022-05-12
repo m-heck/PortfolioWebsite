@@ -29,6 +29,7 @@
     --image-offset: 70px;
     --down-arrow-gap: 4rem;
     --proj-num-size: 2.2rem;
+    --timeline-width: 4px;
 
 }
 
@@ -49,6 +50,7 @@
         --down-arrow-gap: 4rem;
         --proj-num-size: 1.5rem;
         --image-offset: 70px;
+        --timeline-width: 2px;
     }
 }
 
@@ -64,12 +66,14 @@
     overflow-x: hidden;
     overflow-y: hidden;
 
-    cursor: none;
+    /*hide cursor
+    cursor: none;*/
 }
 
 html {
     width: 100vw;
     height: 100vh;
+    min-height: 100%;
 }
 
 a {
@@ -175,11 +179,11 @@ h3 {
     height: 15px;
     border-radius: 50%;
     background: hsl(0, 0%, 80%);
-    transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 5;
     mix-blend-mode: difference;
-    transition: width 0.5s, height 0.5s;
+    transition: width 0.5s, height 0.5s; 
+    transform: translate(-50%, -50%); 
 }
 
 .grow {
@@ -454,6 +458,93 @@ h3 {
         position: absolute;
         right: 50%;
         bottom: var(--down-arrow-gap);
+    }
+}
+
+/* =============== TIMELINE =============== */
+
+.experience-content {
+    font-size: var(--small-font-size);
+}
+
+.experience-content h1 {
+    margin-bottom: 2rem;
+}
+
+.timeline {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.timeline:after {
+    position: absolute;
+    content: '';
+    width: var(--timeline-width);
+    height: 100%;
+    background-color: var(--text-color);
+    margin-top: 0.5rem;
+    
+    left: 50%;
+    top: 0;
+}
+
+.timeline ul li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin: 2%;
+    width: 45%;
+    height: 100%;
+    padding: 15px 20px;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    margin-right: 3%;
+    text-align: right;
+}
+
+.timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    margin-left: 3%;
+}
+
+.timeline-title {
+    margin-bottom: 10px;
+}
+
+.timeline ul li p {
+    margin: 4px 0;
+    
+}
+
+/* for mobile */
+@media screen and (max-width: 767px) {
+    .timeline ul li {
+        width: 90%;
+        float: none;
+        clear: none;
+        margin-bottom: 20px;
+    }
+
+    .timeline ul li:nth-child(odd) {
+        margin-left: 5%;
+        text-align: left;
+    }
+    .timeline ul li:nth-child(even) {
+        margin-right: 5%;
+    }
+
+    .timeline:after {
+        display: none;
+    }
+
+    .experience-content h1 {
+        margin-bottom: 0.5rem;
     }
 }
 

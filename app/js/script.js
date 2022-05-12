@@ -1,6 +1,6 @@
 console.log("javascript loaded");
 
-// ================ CURSOR ================
+/* ================ CURSOR ================
 const cursor = document.querySelector('.cursor');
 document.addEventListener('mousemove', (e) => {
   cursor.style.left = e.pageX + 'px';
@@ -17,3 +17,9 @@ links.forEach((link) => {
     cursor.classList.remove("grow");
   });
 });
+
+*/
+
+/*var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px), 0)`*/
