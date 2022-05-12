@@ -171,7 +171,7 @@ h3 {
     }
 }
 
-/* =============== CURSOR =============== */
+/* =============== CURSOR =============== 
 .cursor {
     position: fixed;
     opacity: 1;
@@ -495,7 +495,7 @@ h3 {
     margin: 2%;
     width: 45%;
     height: 100%;
-    padding: 15px 20px;
+    padding: 30px;
     background-color: white;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
@@ -546,6 +546,32 @@ h3 {
     .experience-content h1 {
         margin-bottom: 0.5rem;
     }
+}
+
+/* =============== READ MORE =============== */
+
+.read-more-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    z-index: 3;
+}
+
+.container p {
+    padding-bottom: .5rem;
+}
+
+.read-more-button {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.read-more-text {
+    display: none
+}
+
+.read-more-text--show {
+    display: inline;
 }
 
 /* =============== PROJECTS PAGES =============== */
