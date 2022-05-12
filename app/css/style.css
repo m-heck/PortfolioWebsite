@@ -256,36 +256,39 @@ h3 {
     font-size: 30px;
 }
 
-#home-bar:hover:after {
-    content: " HOME";
-    opacity: .4;
-    font-weight: 100;
-    font-size: 20px;
-    letter-spacing: 3px;
-}
-
-#about-bar:hover:after {
-    content: " ABOUT";
-    opacity: .4;
-    font-weight: 100;
-    font-size: 20px;
-    letter-spacing: 3px;
-}
-
-#experience-bar:hover:after {
-    content: " EXPERIENCE";
-    opacity: .4;
-    font-weight: 100;
-    font-size: 20px;
-    letter-spacing: 3px;
-}
-
-#projects-bar:hover:after {
-    content: " PROJECTS";
-    opacity: .4;
-    font-weight: 100;
-    font-size: 20px;
-    letter-spacing: 3px;
+/* For bigger-than-phone screens */
+@media screen and (min-width: 481px) {
+    #home-bar:hover:after {
+        content: " HOME";
+        opacity: .4;
+        font-weight: 100;
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+    
+    #about-bar:hover:after {
+        content: " ABOUT";
+        opacity: .4;
+        font-weight: 100;
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+    
+    #experience-bar:hover:after {
+        content: " EXPERIENCE";
+        opacity: .4;
+        font-weight: 100;
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+    
+    #projects-bar:hover:after {
+        content: " PROJECTS";
+        opacity: .4;
+        font-weight: 100;
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
 }
 
 /* =============== CONTENT =============== */
