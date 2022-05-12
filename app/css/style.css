@@ -26,6 +26,7 @@
     --sidebar-gap: 40px;
     --socials-gap: 2rem;
     --image-offset: 70px;
+    --down-arrow-gap: 4rem;
 
 }
 
@@ -43,6 +44,7 @@
         /* misc */
         --sidebar-gap: 25px;
         --socials-gap: 0.8rem;
+        --down-arrow-gap: 4rem;
     }
 }
 
@@ -140,6 +142,7 @@ h3 {
 /* for non-mobile */
 @media screen and (min-width: 768px) {
     #scribbles {
+        position: fixed;
         opacity: 0.05;
         width: 500px;
         height: 500px;
@@ -148,7 +151,7 @@ h3 {
     }
 
     #scribbles2 {
-        position: absolute;
+        position: fixed;
         opacity: 0.07;
         width: 500px;
         height: 500px;
@@ -195,6 +198,13 @@ h3 {
     top: 1rem;
     font-size: var(--icon-size);
     z-index: 5;
+}
+
+/* =============== NUM BAR ===============
+#num-bar {
+    margin-top: 0;
+    border: green 3px solid;
+    display: flex;
 }
 
 /* =============== SIDEBAR =============== */
@@ -382,8 +392,8 @@ h3 {
 
 .down {
     position: absolute;
-    bottom: 4rem;
-    right: 50%;
+    bottom: var(--down-arrow-gap);
+    right: 42%;
 }
 
 /* for non-mobile */
@@ -397,7 +407,9 @@ h3 {
     }
 
     .down {
-        bottom: 0rem;
+        position: absolute;
+        right: 50%;
+        bottom: var(--down-arrow-gap);
     }
 }
 
