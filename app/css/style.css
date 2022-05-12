@@ -183,7 +183,7 @@ h3 {
 #socials {
     opacity: 0.8;
     font-size: var(--icon-size);
-    position: absolute;
+    position: fixed;
     right: var(--socials-gap);
     z-index: 3;
 
@@ -198,7 +198,7 @@ h3 {
 /* =============== HOME ARROW =============== */
 .home-arrow {
     color: var(--primary-color);
-    position: absolute;
+    position: fixed;
     left: var(--socials-gap);
     top: 1rem;
     font-size: var(--icon-size);
@@ -277,7 +277,7 @@ h3 {
 /* =============== CONTENT =============== */
 #content {
     width: 94%;
-    position: absolute;
+    position: fixed;
     right: 0;
     height: 100vh;
 
