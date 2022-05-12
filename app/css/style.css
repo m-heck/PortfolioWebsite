@@ -26,6 +26,7 @@
     --sidebar-gap: 40px;
     --socials-gap: 2rem;
     --project-img-width: 400px;
+    --image-offser: 150px;
 
 }
 
@@ -96,9 +97,10 @@ body {
     justify-content: space-between;
 }
 
+/*
 html, body {
     overflow: hidden;
-}
+}*/
 
 h1 {
     font-size: var(--h1-font-size);
@@ -199,20 +201,20 @@ h3 {
 /* =============== SIDEBAR =============== */
 #sidebar {
     width: auto;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     left: 0;
+    bottom: 0;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-start;
 
     z-index: 3;
 }
 
 #sidebar ul {
-    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 /* Add text that shows up to the right saying what the page is */
@@ -266,7 +268,7 @@ h3 {
     height: 100vh;
 
     overflow: scroll;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     scroll-snap-type: y mandatory;
     z-index: 1;
 
@@ -276,9 +278,7 @@ h3 {
 .content-container {
     padding: 3rem;
     height: 100vh;
-    width: 95vw;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    width: 85vw;
 
     display: flex;
     flex-direction: column;
@@ -289,19 +289,21 @@ h3 {
 }
 
 .background-image {
-    opacity: 0.4;
+    opacity: 0.6;
     position: absolute;
     z-index: -1;
     width: 80vw;
+    height: auto;
+
+    object-fit: cover;
     min-width: 400px;
     max-width: 700px;
-    left: 60px;
+    left: var(--image-offset);
     -moz-box-shadow: 10px 10px 10px var(--background-color-darker);
     -webkit-box-shadow: 10px 10px 10px var(--background-color-darker);
     box-shadow: 10px 10px 10px var(--background-color-darker);
 
     /* hide or unhide images */
-    opacity: 0;
 }
 
 .text-content {
@@ -413,4 +415,8 @@ h3 {
 .pcontent p, .pcontent img {
     margin-top: 1rem;
     margin-bottom: 2rem;
+}
+
+.pcontent p {
+    max-width: 800px;
 }
