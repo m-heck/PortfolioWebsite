@@ -259,11 +259,17 @@ h3 {
 }
 
 /* =============== NUM BAR =============== */
+
 #num-bar ul{
     height: auto;
     border: yellow solid 3px;
     display: flex;
     flex-direction: row;
+    margin: 0;
+}
+
+.navnum {
+    font-size: var(--normal-font-size);
 }
 
 /* =============== CONTENT =============== */
