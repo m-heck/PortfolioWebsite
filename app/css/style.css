@@ -25,6 +25,7 @@
     /* misc */
     --sidebar-gap: 40px;
     --socials-gap: 2rem;
+    --project-img-width: 400px;
 
 }
 
@@ -54,10 +55,10 @@
     margin: 0;
     outline: none;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 html {
-    border: purple 3px solid;
     width: 100vw;
     scroll-behavior: smooth;
     height: 100vh;
@@ -79,7 +80,6 @@ img {
 }
 
 body {
-    border: 3px green solid;
     height: auto;
     width: 100%;
 
@@ -121,7 +121,7 @@ h3 {
 #scribbles {
     position: absolute;
     width: 300px;
-    height: 300px;
+    height: 300px; 
     opacity: .1;
     right: -130px;
     top: -100px;
@@ -132,8 +132,8 @@ h3 {
     width: 300px;
     height: 300px;
     opacity: .1;
-    bottom: -130px;
-    left: -100px;
+    bottom: 0px;
+    left: -150px;
 }
 
 /* for non-mobile */
@@ -151,8 +151,8 @@ h3 {
         opacity: 0.07;
         width: 500px;
         height: 500px;
-        bottom: -230px;
-        left: -200px;
+        bottom: 0;
+        left: -250px;
     }
 }
 
@@ -258,20 +258,6 @@ h3 {
     letter-spacing: 3px;
 }
 
-/* =============== NUM BAR =============== */
-
-#num-bar ul{
-    height: auto;
-    border: yellow solid 3px;
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-}
-
-.navnum {
-    font-size: var(--normal-font-size);
-}
-
 /* =============== CONTENT =============== */
 #content {
     width: 94%;
@@ -364,15 +350,18 @@ h3 {
     justify-content: center;
 }
 
-.project-image {
-    object-fit: cover;
-    width: 400px;
-    height: 250px;
-    z-index: 2;
-
+.project-unit a {
+    width: var(--project-img-width);
     -moz-box-shadow: 10px 10px 15px var(--background-color-darker);
     -webkit-box-shadow: 10px 10px 15px var(--background-color-darker);
     box-shadow: 10px 10px 15px var(--background-color-darker);
+}
+
+.project-image {
+    object-fit: cover;
+    width: var(--project-img-width);
+    height: 250px;
+    z-index: 2;
 }
 
 .project-title {
