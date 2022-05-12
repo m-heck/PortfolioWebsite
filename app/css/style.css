@@ -63,6 +63,8 @@
     outline: none;
     overflow-x: hidden;
     overflow-y: hidden;
+
+    cursor: none;
 }
 
 html {
@@ -165,17 +167,25 @@ h3 {
     }
 }
 
-/* =============== CURSOR =============== 
+/* =============== CURSOR =============== */
 .cursor {
     position: fixed;
-    opacity: 0.3;
+    opacity: 1;
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: var(--text-color);
-    transition: 0.025s;
+    background: hsl(0, 0%, 80%);
     transform: translate(-50%, -50%);
     pointer-events: none;
+    z-index: 5;
+    mix-blend-mode: difference;
+    transition: width 0.5s, height 0.5s;
+}
+
+.grow {
+    width: 30px;
+    height: 30px;
+    transition: width 0.5s, height 0.5s;
 }
 
 /* =============== SOCIALS =============== */
