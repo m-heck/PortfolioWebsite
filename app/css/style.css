@@ -4,6 +4,7 @@
 :root {
     /* colors */
     --primary-color: hsl(35, 42%, 48%);
+    --primary-color-lighter: hsl(35, 32%, 48%, 0.7);
     --background-color: hsl(45, 30%, 97%);
     --background-color-darker: hsl(45, 7%, 80%);
 
@@ -51,6 +52,7 @@
 /* =============== GLOBALS =============== */
 
 * {
+    scroll-behavior: smooth;
     font-size: 100%;
     box-sizing: border-box;
     padding: 0;
@@ -62,7 +64,6 @@
 
 html {
     width: 100vw;
-    scroll-behavior: smooth;
     height: 100vh;
 }
 
@@ -297,22 +298,30 @@ h3 {
     position: relative;
 }
 
+.title-content, .subtitle-content {
+    z-index: 2;
+}
+
 .background-image {
     opacity: 0.6;
     position: absolute;
-    z-index: -1;
-    width: 80vw;
+    z-index: 1;
+    width: 70vw;
     height: auto;
 
     object-fit: cover;
     min-width: 400px;
     max-width: 700px;
     left: var(--image-offset);
+    
+
+    /* hide or unhide images */
+}
+
+.background-image {
     -moz-box-shadow: 10px 10px 10px var(--background-color-darker);
     -webkit-box-shadow: 10px 10px 10px var(--background-color-darker);
     box-shadow: 10px 10px 10px var(--background-color-darker);
-
-    /* hide or unhide images */
 }
 
 .text-content {
@@ -327,6 +336,10 @@ h3 {
 
     .content-container {
         width: 70vw;
+    }
+
+    .background-image {
+        width: 60vw;
     }
 
     /*
@@ -395,6 +408,21 @@ h3 {
     position: absolute;
     bottom: var(--down-arrow-gap);
     right: 42%;
+}
+
+.projectnum-container ul{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.projectnum-container ul li {
+    text-align: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--primary-color-lighter);
+    margin-right: 1rem;
 }
 
 /* for non-mobile */
