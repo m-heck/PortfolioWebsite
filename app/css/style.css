@@ -570,7 +570,7 @@ h3 {
 }
 
 .read-more-text {
-    display: none
+    display: none;
 }
 
 .read-more-text--show {
@@ -607,4 +607,33 @@ h3 {
     -moz-box-shadow: 10px 10px 10px var(--background-color-darker);
     -webkit-box-shadow: 10px 10px 10px var(--background-color-darker);
     box-shadow: 10px 10px 10px var(--background-color-darker);
+}
+
+/* ========== TRANSITIONS ========== */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+.from-left {
+    transform: translateX(-50%);
+}
+
+.from-right {
+    transform: translateX(50%);
+}
+
+.from-left, .from-right {
+    transition: opacity 250ms ease-in, transform 800ms ease-in;
+    opacity: 0;
+}
+
+.from-left.appear, .from-right.appear {
+    transform: translateX(0);
+    opacity: 1;
 }
