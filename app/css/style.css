@@ -405,7 +405,8 @@ h3 {
 
 .pcontent {
     height: auto;
-    margin: 3rem;
+    width: 100%;
+    padding: 3rem;
 
     display: flex;
     flex-direction: column;
@@ -417,6 +418,11 @@ h3 {
     margin-bottom: 2rem;
 }
 
-.pcontent p {
+.pcontent img {
+    max-width: 600px;
+    width: 80%;
+}
+
+.pcontent {
     max-width: 800px;
 }
