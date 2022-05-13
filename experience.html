@@ -22,7 +22,7 @@
 </head>
 <body>
   <a href="index.html"><i class="uil uil-angle-left-b home-arrow fade-in"></i></a>
-  <div class="pcontent experience-content">
+  <div class="pcontent experience-content econtent">
     <img src="app/images/desk.jpg" class="project-image fade-in">
       <h1 class="fade-in">Experience.</h1>
       <div class="timeline">
@@ -87,10 +87,43 @@
             <li class="read-more-container fade-in from-left">
                 <h2 class="timeline-title">Machine Intelligence Lab. <p class="subtitle">Undergraduate Researcher & Software Team Member</p></h2>
                 <div class="container">
-                  <p>JANUARY 2022 - PRESENT</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  <p>JANUARY 2022 - JUNE 2022</p>
+                  <p>I helped conduct undergraduate research with the Machine Intelligence Lab (MIL) at UF during the Spring 2022 semester. I was a member of the software team and worked with a group of developers to program an autonomous robot.
                       <span class="read-more-text">
-                          Aliquam sem et tortor consequat id porta nibh. In arcu cursus euismod quis viverra nibh. Elit sed vulputate mi sit amet mauris commodo quis imperdiet. Nunc sed velit dignissim sodales. Proin sed libero enim sed faucibus. Sed cras ornare arcu dui vivamus. Hac habitasse platea dictumst quisque sagittis. Turpis massa sed elementum tempus egestas sed. Maecenas accumsan lacus vel facilisis volutpat est. Ac tortor dignissim convallis aenean et. Arcu dictum varius duis at consectetur lorem donec massa. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Senectus et netus et malesuada. Ullamcorper sit amet risus nullam eget felis eget nunc. Lorem mollis aliquam ut porttitor. Justo laoreet sit amet cursus sit amet. Morbi quis commodo odio aenean sed adipiscing diam. At in tellus integer feugiat scelerisque varius morbi enim.
+                        <img src="app/images/mil-logo.png" class="read-more-img">
+                        <span class="read-more-subtitle"><b>What I Did:</b></span>
+                        <span>As a member of the software team, I mainly helped prepare MIL's autonomous robot, the NaviGator, for a fully-simulated robotics competition, VRX. Though this specific competition was simulated, the NaviGator is a physical robot that is also entered into other non-simulated competitions.</span>
+
+                        <span class="read-more-subtitle"><u>The Beginning of the Semester</u></span>
+                        <span>For about the first month of the semester, I worked mostly on setting up the MIL repository and installing the necessary software. I found the onboarding process rather challenging because of how new everything was to me. I also had a M1 Mac laptop, which was incompatible with almost every tool that MIL used. In retrospect, working through the onboarding process on an M1 helped teach me how to troubleshoot issues by myself.</span>
+                        <span>I was able to put a lot of skills I learned in my classes to use. For example, we learned about the theory behind Git and version control, but now that I actually had to use to develop with others, I became much more familiar with it. In the process, I also learned the standard protocol of how to accept, work on, and publish solutions to the tasks I was given. The operating system that MIL used was Ubuntu, a distribution of Linux. During the beginning of the semester, I also had to get acquainted with Linux. </span>
+
+                        <img src="app/images/navigator.jpeg" class="read-more-img">
+
+                        <span class="read-more-subtitle"><u>The Middle of the Semester</u></span>
+                        <span>Throughout the semester, I attended weekly software team meetings, where we discussed our tasks, progress, and next steps. I found these meetings alone very helpful in showing me the development process. </span>
+                        <span>Once I completed the onboarding, I was assigned my first task: I had to make a script to switch between development branches that automated other tasks that must also be completed before and after switching branches.</span>
+                        <span>Before this point, I rarely had to use the terminal, so making terminal scripts was foreign to me. I did not even know what the term "bash" meant. I had to do a lot of research beforehand before I even had an idea about how I should go about solving my task.</span>
+                        <span>One unexpected issue I came across was how difficult it was to keep my Git branches and commits organized, especially as a new Git user. I had to develop my scripts on one branch, but any time I ran or tested my scripts, I would be switched to another branch. To solve this, I had to do some additional research about the intricacies of Git branches.</span>
+                        <span>Once I understood Git, I then had to work on automating the other miscellaneous tasks that I had to incorporate into my script. For example, I had to update submodules, recompile the code, remove certain files and directories each time a branch was switched, and change the contents of certain files in the repository to prevent errors.</span>
+                        <span>Though the resulting script was rather simple, the process I went through to learn the topics necessary to write such a script was not. I eventually completed the script, learned how to push the remote repository, and got my merge request approved (after a few attempts).</span>
+
+                        <span class="read-more-subtitle"><u>The End of the Semester</u></span>
+                        <span>My remaining few tasks I had to complete involved making world files that the NaviGator could be tested on. To do this, however, I would first need to learn and install the Robot Operating System (ROS). ROS is a framework used to develop robot software. To learn it, I worked through the ROS tutorials in ROS's documentation. </span>
+                        <span>These world files are written in XML and simulated using Gazebo. In them, I can control various attributes of the world, such as light, objects, and terrain. For each of these world files, I changed these parameters so the NaviGator could be tested in different conditions. By the end of the semester, I created about 10 different world files, with each one aimed at testing the environmental conditions of specific tasks that the NaviGator will have to complete in the competition. </span>
+
+                        <img src="app/images/mil-task.jpg" class="read-more-img">
+
+                        <span class="read-more-subtitle"><b>What I Learned:</b></span>
+                        <span>In addition to all the technical skills I gained, I also came to the important realization that robotics aren't for me. However, I also found myself coming out of this experience with much more insight into how the development process works, something that will prove useful in other fields of computer science. As much as I enjoyed my time with MIL, I will likely be exploring other computer science fields in future semesters. </span>
+
+                        <span class="read-more-subtitle"><b>Skills Involved:</b></span>
+                        <span>·Python and C++</span>
+                        <span>·Git</span>
+                        <span>·The Development Process</span>
+                        <span>·Ubuntu (Linux)</span>
+                        <span>·ROS</span>
+                        <span>·Bash Automations</span>
                       </span>
                   </p>
                   <a class="read-more-button">Read More</a>
@@ -100,9 +133,16 @@
                 <h2 class="timeline-title">Japanese Student Association. <p class="subtitle">Web Developer</p></h2>
                 <div class="container">
                   <p>FEBRUARY 2022 - PRESENT</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      <span class="read-more-text">
-                          Aliquam sem et tortor consequat id porta nibh. In arcu cursus euismod quis viverra nibh. Elit sed vulputate mi sit amet mauris commodo quis imperdiet. Nunc sed velit dignissim sodales. Proin sed libero enim sed faucibus. Sed cras ornare arcu dui vivamus. Hac habitasse platea dictumst quisque sagittis. Turpis massa sed elementum tempus egestas sed. Maecenas accumsan lacus vel facilisis volutpat est. Ac tortor dignissim convallis aenean et. Arcu dictum varius duis at consectetur lorem donec massa. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Senectus et netus et malesuada. Ullamcorper sit amet risus nullam eget felis eget nunc. Lorem mollis aliquam ut porttitor. Justo laoreet sit amet cursus sit amet. Morbi quis commodo odio aenean sed adipiscing diam. At in tellus integer feugiat scelerisque varius morbi enim.
+                  <p>I am currently working on developing a website for UF's new Japanese Student Association (JSA) from scratch using HTML, CSS, and JavaScript.
+                        <span class="read-more-text">
+                        <span>I have a "Projects" page dedicated to the website that you can find here: </span>
+                        <span class="button read-more-subtitle">JSA Website</span>
+
+                        <span class="read-more-subtitle"><b>Skills Involved:</b></span>
+                        <span>·HTML, CSS, and JavaScript</span>
+                        <span>·Web Development</span>
+                        <span>·Graphic Design</span>
+                        <span>·UX</span>
                       </span>
                   </p>
                   <a class="read-more-button">Read More</a>
