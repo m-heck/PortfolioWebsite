@@ -592,6 +592,10 @@ h3 {
     text-align: right;
 }
 
+.timeline ul li:nth-child(odd) .read-more-img {
+    align-self: end;
+}
+
 .timeline ul li:nth-child(even) {
     float: right;
     clear: left;
@@ -628,6 +632,11 @@ h3 {
         margin-left: 5%;
         text-align: left;
     }
+
+    .timeline ul li:nth-child(odd) .read-more-img {
+        align-self: flex-start;
+    }
+
     .timeline ul li:nth-child(even) {
         margin-right: 5%;
     }
@@ -661,10 +670,27 @@ h3 {
 
 .read-more-text {
     display: none;
+    margin-top: 8px;
+}
+
+.read-more-text span {
+    margin: 4px 0;
 }
 
 .read-more-text--show {
-    display: inline;
+    display: flex;
+    flex-direction: column;
+}
+
+.read-more-text--show .read-more-subtitle { 
+    margin-top: 12px;
+}
+
+.read-more-img {
+    object-fit: cover;
+    width: 70%;
+    max-width: 500px;
+    margin-top: 12px;
 }
 
 /* =============== PROJECTS PAGES =============== */
