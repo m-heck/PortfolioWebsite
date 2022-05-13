@@ -93,7 +93,7 @@ html {
 a {
     text-decoration: none;
     color: var(--text-color);
-    cursor: url('/app/images/cursorbig.svg') 11 11, auto;
+    cursor: url('/app/images/cursorbig.svg') 20 10, auto;
 }
 
 ul {
@@ -263,7 +263,7 @@ h3 {
 /* Add text that shows up to the right saying what the page is */
 #sidebar li {
     margin: var(--sidebar-gap);
-    cursor: pointer;
+    cursor: url('/app/images/cursorbig.svg') 20 10, auto;
 }
 
 .nav-bar {
@@ -289,7 +289,6 @@ h3 {
         font-size: 20px;
         letter-spacing: 3px;
         cursor: url('/app/images/cursorsmall.svg') 6 6, auto;
-    }
     }
     
     #experience-bar:hover:after {
@@ -496,7 +495,7 @@ h3 {
 
 .arrow {
     font-size: 15px;
-    cursor: pointer;
+    cursor: url('/app/images/cursorbig.svg') 20 10, auto;
 }
 
 .down {
@@ -641,7 +640,7 @@ h3 {
 
 .read-more-button {
     color: var(--primary-color);
-    cursor: pointer;
+    cursor: url('/app/images/cursorbig.svg') 20 10, auto;
 }
 
 .read-more-text {
