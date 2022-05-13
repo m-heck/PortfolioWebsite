@@ -29,7 +29,7 @@
     --socials-gap: 2rem;
     --image-offset: 70px;
     --down-arrow-gap: 4rem;
-    --proj-num-size: 2.2rem;
+    --proj-num-size: 2.5rem;
     --timeline-width: 4px;
     --me-size: 300px;
     --content-container-width: 100%;
@@ -54,7 +54,7 @@
         --sidebar-gap: 25px;
         --socials-gap: 0.8rem;
         --down-arrow-gap: 6rem;
-        --proj-num-size: 1.5rem;
+        --proj-num-size: 1.6rem;
         --image-offset: 70px;
         --timeline-width: 2px;
         --me-size: 150px;
@@ -519,6 +519,10 @@ h3 {
     border-radius: 50%;
     background-color: var(--primary-color-lighter);
     margin-right: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* for non-mobile */
