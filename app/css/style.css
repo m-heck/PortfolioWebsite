@@ -36,6 +36,7 @@
     --email-me-width: 160px;
     --p-margin: 1.4rem;
     --typing-height: 50px;
+    --slide-amt: -215px;
 }
 
 /* for mobile */
@@ -62,6 +63,7 @@
         --p-margin: 1rem;
         --typing-height: 20px;
         --h2-gap: 3px;
+        --slide-amt: -108px;
     }
 }
 
@@ -323,12 +325,12 @@ h3 {
 .dynamic-txt li{
     position: relative;
     top: 0;
-    animation: slide 10s steps(5) infinite;
+    animation: slide 15s steps(5) infinite;
 }
 
 @keyframes slide {
     100% {
-        top: -108px;
+        top: var(--slide-amt);
     }
 }
 
@@ -343,7 +345,7 @@ h3 {
     height: 100%;
     width: 100%;
     border-left: 2px solid var(--primary-color);
-    animation: typing 2s steps(18) infinite;
+    animation: typing 3s steps(18) infinite;
     background-color: var(--background-color);
 }
 
