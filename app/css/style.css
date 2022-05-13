@@ -87,11 +87,13 @@ html {
     width: 100vw;
     height: 100vh;
     min-height: 100%;
+    cursor: url('/app/images/cursorsmall.svg') 6 6, auto;
 }
 
 a {
     text-decoration: none;
     color: var(--text-color);
+    cursor: url('/app/images/cursorbig.svg') 11 11, auto;
 }
 
 ul {
@@ -277,6 +279,7 @@ h3 {
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 3px;
+        cursor: url('/app/images/cursorsmall.svg') 6 6, auto;
     }
     
     #about-bar:hover:after {
@@ -285,6 +288,8 @@ h3 {
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 3px;
+        cursor: url('/app/images/cursorsmall.svg') 6 6, auto;
+    }
     }
     
     #experience-bar:hover:after {
@@ -293,6 +298,7 @@ h3 {
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 3px;
+        cursor: url('/app/images/cursorsmall.svg') 6 6, auto;
     }
     
     #projects-bar:hover:after {
@@ -301,6 +307,7 @@ h3 {
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 3px;
+        cursor: url('/app/images/cursorsmall.svg') 6 6, auto;
     }
 }
 
