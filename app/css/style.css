@@ -736,6 +736,10 @@ h3 {
     box-shadow: 10px 10px 10px var(--background-color-darker);
 }
 
+.border {
+    border: solid 3px var(--text-color-lighter);
+}
+
 /* =============== ABOUT =============== */
 
 .me-img {
