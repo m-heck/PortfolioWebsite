@@ -16,7 +16,7 @@
     --normal-font-size: 1.5rem;
     --h1-font-size: 5.5rem;
     --h2-font-size: 2rem;
-    --h3-font-size: 3rem;
+    --h3-font-size: 3.8rem;
     --icon-size: 2rem;
     
     /* font weights */
@@ -413,6 +413,10 @@ h3 {
     opacity: 0.6;
 }
 
+.lighter img {
+    opacity: 0.4;
+}
+
 .background-image {
     -moz-box-shadow: 10px 10px 10px var(--background-color-darker);
     -webkit-box-shadow: 10px 10px 10px var(--background-color-darker);
@@ -548,6 +552,11 @@ h3 {
 
 .subtitle-content {
     font-size: (var(--normal-font-size));
+    text-shadow: 2px 2px white;
+}
+
+.white-shadow {
+    text-shadow: 2px 2px white;
 }
 
 /* =============== TIMELINE =============== */
