@@ -678,7 +678,7 @@ h3 {
 
 .read-more-button {
     color: var(--primary-color);
-    cursor: url('/app/images/cursorbig.svg') 20 10, auto;
+    cursor: url('/app/images/cursorbig.svg') 20 10, pointer;
 }
 
 .read-more-text {
