@@ -93,7 +93,7 @@ html {
 a {
     text-decoration: none;
     color: var(--text-color);
-    cursor: url('/app/images/cursorbig.svg') 20 10, auto;
+    cursor: url('/app/images/cursorbig.svg') 20 10, pointer;
 }
 
 ul {
@@ -263,7 +263,7 @@ h3 {
 /* Add text that shows up to the right saying what the page is */
 #sidebar li {
     margin: var(--sidebar-gap);
-    cursor: url('/app/images/cursorbig.svg') 20 10, auto;
+    cursor: url('/app/images/cursorbig.svg') 20 10, pointer;
 }
 
 .nav-bar {
@@ -279,7 +279,7 @@ h3 {
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 3px;
-        cursor: url('/app/images/cursorsmall.svg') 6 6, auto;
+        cursor: url('/app/images/cursorsmall.svg') 6 6, pointer;
     }
     
     #about-bar:hover:after {
@@ -288,7 +288,7 @@ h3 {
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 3px;
-        cursor: url('/app/images/cursorsmall.svg') 6 6, auto;
+        cursor: url('/app/images/cursorsmall.svg') 6 6, pointer;
     }
     
     #experience-bar:hover:after {
@@ -297,7 +297,7 @@ h3 {
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 3px;
-        cursor: url('/app/images/cursorsmall.svg') 6 6, auto;
+        cursor: url('/app/images/cursorsmall.svg') 6 6, pointer;
     }
     
     #projects-bar:hover:after {
@@ -306,7 +306,7 @@ h3 {
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 3px;
-        cursor: url('/app/images/cursorsmall.svg') 6 6, auto;
+        cursor: url('/app/images/cursorsmall.svg') 6 6, pointer;
     }
 }
 
@@ -499,7 +499,7 @@ h3 {
 
 .arrow {
     font-size: 15px;
-    cursor: url('/app/images/cursorbig.svg') 20 10, auto;
+    cursor: url('/app/images/cursorbig.svg') 20 10, pointer;
 }
 
 .down {
