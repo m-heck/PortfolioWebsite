@@ -31,12 +31,13 @@
     --down-arrow-gap: 4rem;
     --proj-num-size: 2.5rem;
     --timeline-width: 4px;
-    --me-size: 300px;
+    --me-size: 250px;
     --content-container-width: 100%;
     --email-me-width: 160px;
     --p-margin: 1.4rem;
     --typing-height: 50px;
     --slide-amt: -215px;
+    --proj-p-margin: 3rem;
 }
 
 /* for mobile */
@@ -64,6 +65,7 @@
         --typing-height: 20px;
         --h2-gap: 3px;
         --slide-amt: -85px;
+        --proj-p-margin: 3rem;
     }
 }
 
@@ -135,7 +137,7 @@ h1 {
 
 h2 {
     font-size: var(--h2-font-size);
-    font-weight: var(--h20-font-weight);
+    font-weight: var(--h2-font-weight);
     letter-spacing: var(--h2-gap);
     color: var(--primary-color);
 }
@@ -143,6 +145,11 @@ h2 {
 h3 {
     font-size: var(--h3-font-size);
     font-weight: var(--h3-font-weight);
+}
+
+h4 {
+    margin-top: var(--proj-p-margin);
+    font-weight: (var(--normal-font-weight));
 }
 
 /* =============== DECOR =============== */
@@ -751,7 +758,7 @@ h3 {
 }
 
 .button {
-    padding: .5rem;
+    padding: .25rem;
     margin-top: 1.5rem;
     margin-bottom: 3rem;
     width: var(--email-me-width);
