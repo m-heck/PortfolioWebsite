@@ -9,4 +9,4 @@ https://m-heck.github.io/PortfolioWebsite/
   ``` git clone https://github.com/m-heck/PortfolioWebsite.git ```
   
  ### Making Changes
- You can use a live server to view changes you make to the website before you commit. For example, in VS Code, the extension "Live Server" can be used.
+ You can use a live server to view changes you make to the website before you commit. For example, in VS Code, the extension "Live Server" can be used
